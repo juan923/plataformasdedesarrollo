@@ -29,27 +29,24 @@ namespace ConsoleApp1
             //    intentos++;
             //}
 
-            int numero = 5;
-            int numingresado = 0;
+            int numero = 0;
             int intentos = 0;
-            while (intentos  < 3)
+            while (numero != 5 && intentos < 3)
             {
+                intentos++;
                 Console.Write("Adivine el numero: ");
-                numingresado = int.Parse(Console.ReadLine());
+                numero=int.Parse(Console.ReadLine());
+                
+                Console.WriteLine(numero);
 
-                if (numero == numingresado)
+                if (numero == 5)
                 {
                     Console.WriteLine("advinaste");
-                }
-                else
-                {
+                }else{
                     Console.WriteLine("Siga participando");
                 }
-
             }
 
-
-            Console.WriteLine("Hello World!");
         }
     }
 }
